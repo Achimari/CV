@@ -1,0 +1,178 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  color: #00ff00;
+  font-family: monospace;
+  user-select: none;
+}
+
+canvas, #matrix-canvas, #intro-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background: black;
+  z-index: 1;
+}
+
+#intro-canvas {
+  display: none;
+}
+
+#console-input-container {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+#console-label,
+#console-message {
+  color: #00ff00;
+  font-size: 1.2rem;
+}
+
+#console-input {
+  font-family: monospace;
+  font-size: 1.3rem;
+  width: 60%;
+  padding: 8px;
+  background: black;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  outline: none;
+}
+
+#console-input:focus {
+  border-color: #55ff55;
+}
+
+#console-input {
+  text-transform: uppercase;
+}
+
+#star-wars-text {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  perspective: 400px;
+  z-index: 3;
+  color: yellow;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+}
+
+.crawl {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  transform-origin: bottom center;
+  font-size: 1.5rem;
+  animation: crawlAnim 18s linear forwards;
+}
+
+@keyframes crawlAnim {
+  0% {
+    transform: rotateX(25deg) translateZ(0);
+    bottom: -100%;
+  }
+  100% {
+    transform: rotateX(25deg) translateZ(-300px);
+    bottom: 100%;
+  }
+}
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#nav-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translate(-50%, -50%);
+}
+
+#red-pill {
+  all: unset;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 1.3rem;
+  color: #ff4c4c;
+  border: 2px solid #ff4c4c;
+  border-radius: 20px;
+  background-color: black;
+  box-shadow: 0 0 12px #ff1a1a;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: scale 0.2s ease, box-shadow 0.2s ease;
+}
+
+#red-pill:hover {
+  scale: 1.05;
+  box-shadow: 0 0 18px #ff3333;
+}
+
+.orbit-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  margin: 0;
+  padding: 0; /* 👈 this is the important part */
+}
+
+
+.orbit-nav li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.4s ease;
+  transform: translate(-50%, -50%);
+}
+
+.orbit-nav li a {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #0f0;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.orbit-nav li:hover a {
+  transform: scale(1.2);
+}
