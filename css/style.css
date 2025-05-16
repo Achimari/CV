@@ -146,7 +146,7 @@ canvas, #matrix-canvas, #intro-canvas {
   transform: translate(-50%, -50%);
   list-style: none;
   margin: 0;
-  padding: 0; /* 👈 this is the important part */
+  padding: 0;
 }
 
 
