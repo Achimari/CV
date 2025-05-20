@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auris Modules - Dota Inspired</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <canvas id="stars-canvas"></canvas>
+
+  <section class="module-grid">
+    <div class="module" data-modal="trans">TransPage<br><small>Extract & Transpose</small></div>
+    <div class="module" data-modal="lessons">LessonsPage<br><small>Pitch Training</small></div>
+    <div class="module" data-modal="impr">ImprPage<br><small>Generate Improvs</small></div>
+    <div class="module" data-modal="melody">MelodyPage<br><small>Record & Harmonize</small></div>
+  </section>
+
+  <div class="modal" id="trans-modal">
+    <div class="modal-content">
+      <span class="close" data-close="trans">&times;</span>
+      <div class="modal-left">
+        <video controls>
+          <source src="videos/transpage.mp4'" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-right">
+        <h2>TransPage</h2>
+        <div class="stat"><span>Action:</span><span>Upload Sheet Music</span></div>
+        <div class="stat"><span>Input:</span><span>Image or PDF of Notation</span></div>
+        <div class="stat"><span>Processing:</span><span>Optical Music Recognition + E♭ Transposition</span></div>
+        <div class="stat"><span>Output:</span><span>Transposed Note Sequence</span></div>
+        <div class="stat"><span>Feature:</span><span>MIDI Playback, Range Check</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="lessons-modal">
+    <div class="modal-content">
+      <span class="close" data-close="lessons">&times;</span>
+      <div class="modal-left">
+        <video controls>
+          <source src="'videos/lessonspage.mp4'" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-right">
+        <h2>LessonsPage</h2>
+        <div class="stat"><span>Mode:</span><span>Note Recognition</span></div>
+        <div class="stat"><span>Mechanism:</span><span>Random Note Playback</span></div>
+        <div class="stat"><span>Input:</span><span>User Selection</span></div>
+        <div class="stat"><span>Feedback:</span><span>Correctness Check</span></div>
+        <div class="stat"><span>Goal:</span><span>Develop Pitch Accuracy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="impr-modal">
+    <div class="modal-content">
+      <span class="close" data-close="impr">&times;</span>
+      <div class="modal-left">
+        <video controls>
+          <source src="'videos/imprpage.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-right">
+        <h2>ImprPage</h2>
+        <div class="stat"><span>Purpose:</span><span>Generate Improv Patterns</span></div>
+        <div class="stat"><span>Input:</span><span>Extracted Notes or Manual Key</span></div>
+        <div class="stat"><span>Analysis:</span><span>Tonality Detection</span></div>
+        <div class="stat"><span>Output:</span><span>Improvisation Pattern Blocks</span></div>
+        <div class="stat"><span>Interaction:</span><span>MIDI Playback with Highlights</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="melody-modal">
+    <div class="modal-content">
+      <span class="close" data-close="melody">&times;</span>
+      <div class="modal-left">
+        <video controls>
+          <source src="videos/melodypage.mp4'" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="modal-right">
+        <h2>MelodyPage</h2>
+        <div class="stat"><span>Action:</span><span>Record Audio Melody</span></div>
+        <div class="stat"><span>Processing:</span><span>Pitch Detection</span></div>
+        <div class="stat"><span>Output:</span><span>Symbolic Note Display</span></div>
+        <div class="stat"><span>Feature:</span><span>Playback with Note Highlighting</span></div>
+        <div class="stat"><span>Use Case:</span><span>Practice & Self-Evaluation</span></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/diploma.js"></script>
+</body>
+</html>
